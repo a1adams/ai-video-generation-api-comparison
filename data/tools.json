@@ -1,0 +1,333 @@
+{
+  "keyword": "ai video generation api",
+  "title": "AI video generation API comparison: async jobs, webhooks, idempotency and cost per job across 8 providers",
+  "lastChecked": "2026-10-07",
+  "capabilityChecks": [
+    {
+      "key": "asyncJobPolling",
+      "label": "Async job + polling"
+    },
+    {
+      "key": "completionWebhook",
+      "label": "Completion webhook"
+    },
+    {
+      "key": "signedWebhookPayload",
+      "label": "Signed webhook payload"
+    },
+    {
+      "key": "idempotencyKey",
+      "label": "Idempotency key"
+    },
+    {
+      "key": "costReportedPerJob",
+      "label": "Cost reported per job"
+    },
+    {
+      "key": "multiStepWorkflowInOneCall",
+      "label": "Multi-step workflow in one call"
+    },
+    {
+      "key": "officialSdkOrCliRepo",
+      "label": "Official SDK or CLI repo"
+    }
+  ],
+  "tools": [
+    {
+      "n": 1,
+      "name": "Wireflow",
+      "tagline": "workflow API that runs a saved multi-model graph as one job",
+      "homepage": "https://www.wireflow.ai/ai-workflow-api",
+      "docs": "https://www.wireflow.ai/docs/api",
+      "pricing": "https://www.wireflow.ai/pricing",
+      "claudeConnection": null,
+      "restApi": true,
+      "modelSupport": "Image, video and audio model nodes in one workflow",
+      "freeTier": "unverified",
+      "repo": null,
+      "note": "Documentation review 2026-10-06; product and account behaviour were not tested. No official SDK per the API reference.",
+      "quickstart": [
+        {
+          "label": "Setup reference: follow the official authentication and request guide. This is a documentation URL, not an executed API example.",
+          "lang": "text",
+          "code": "https://www.wireflow.ai/docs/api/run"
+        }
+      ],
+      "capabilities": {
+        "asyncJobPolling": true,
+        "completionWebhook": true,
+        "signedWebhookPayload": true,
+        "idempotencyKey": true,
+        "costReportedPerJob": true,
+        "multiStepWorkflowInOneCall": true,
+        "officialSdkOrCliRepo": false
+      },
+      "live": {
+        "stars": null,
+        "lastPush": null,
+        "latestRelease": null,
+        "latestReleaseDate": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "n": 2,
+      "name": "Runway API",
+      "tagline": "task API for Runway and partner video models, plus published Workflows and prebuilt Recipes",
+      "homepage": "https://docs.dev.runwayml.com/",
+      "docs": "https://docs.dev.runwayml.com/guides/using-the-api/",
+      "pricing": "https://docs.dev.runwayml.com/guides/pricing/",
+      "claudeConnection": null,
+      "restApi": true,
+      "modelSupport": "Runway and partner video, image and audio models",
+      "freeTier": "unverified",
+      "repo": "runwayml/sdk-python",
+      "note": "Documentation review 2026-10-06; product and account behaviour were not tested.",
+      "quickstart": [
+        {
+          "label": "Setup reference: follow the official authentication and request guide. This is a documentation URL, not an executed API example.",
+          "lang": "text",
+          "code": "https://docs.dev.runwayml.com/guides/using-the-api/"
+        }
+      ],
+      "capabilities": {
+        "asyncJobPolling": true,
+        "completionWebhook": null,
+        "signedWebhookPayload": null,
+        "idempotencyKey": null,
+        "costReportedPerJob": true,
+        "multiStepWorkflowInOneCall": true,
+        "officialSdkOrCliRepo": true
+      },
+      "live": {
+        "stars": 26,
+        "lastPush": "2026-10-02T18:45:33Z",
+        "latestRelease": "v5.21.0",
+        "latestReleaseDate": "2026-10-02",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "n": 3,
+      "name": "Luma AI API",
+      "tagline": "Luma Agents API for Luma's video and image models",
+      "homepage": "https://lumalabs.ai/api",
+      "docs": "https://docs.agents.lumalabs.ai/guides/videos/generation/",
+      "pricing": "https://docs.agents.lumalabs.ai/guides/pricing/",
+      "claudeConnection": null,
+      "restApi": true,
+      "modelSupport": "Luma video and image models",
+      "freeTier": "unverified",
+      "repo": "lumalabs/luma-agents-python",
+      "note": "Documentation review 2026-10-06 of the Luma Agents API, which replaces the legacy Dream Machine API; product and account behaviour were not tested.",
+      "quickstart": [
+        {
+          "label": "Setup reference: follow the official authentication and request guide. This is a documentation URL, not an executed API example.",
+          "lang": "text",
+          "code": "https://docs.agents.lumalabs.ai/"
+        }
+      ],
+      "capabilities": {
+        "asyncJobPolling": true,
+        "completionWebhook": false,
+        "signedWebhookPayload": null,
+        "idempotencyKey": null,
+        "costReportedPerJob": null,
+        "multiStepWorkflowInOneCall": null,
+        "officialSdkOrCliRepo": true
+      },
+      "live": {
+        "stars": 2,
+        "lastPush": "2026-09-17T22:09:08Z",
+        "latestRelease": "v0.5.0",
+        "latestReleaseDate": "2026-08-05",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "n": 4,
+      "name": "Google Gemini API",
+      "tagline": "long-running video operations for Veo and Gemini Omni Flash",
+      "homepage": "https://ai.google.dev/gemini-api/docs/video",
+      "docs": "https://ai.google.dev/gemini-api/docs/veo",
+      "pricing": "https://ai.google.dev/gemini-api/docs/pricing",
+      "claudeConnection": null,
+      "restApi": true,
+      "modelSupport": "Google video models",
+      "freeTier": "unverified",
+      "repo": "googleapis/python-genai",
+      "note": "Documentation review 2026-10-06; product and account behaviour were not tested.",
+      "quickstart": [
+        {
+          "label": "Setup reference: follow the official authentication and request guide. This is a documentation URL, not an executed API example.",
+          "lang": "text",
+          "code": "https://ai.google.dev/gemini-api/docs/veo"
+        }
+      ],
+      "capabilities": {
+        "asyncJobPolling": true,
+        "completionWebhook": true,
+        "signedWebhookPayload": true,
+        "idempotencyKey": null,
+        "costReportedPerJob": null,
+        "multiStepWorkflowInOneCall": null,
+        "officialSdkOrCliRepo": true
+      },
+      "live": {
+        "stars": 4006,
+        "lastPush": "2026-10-06T23:24:37Z",
+        "latestRelease": "v2.28.0",
+        "latestReleaseDate": "2026-10-02",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "n": 5,
+      "name": "MiniMax API",
+      "tagline": "video task API for MiniMax's own video models",
+      "homepage": "https://platform.minimax.io",
+      "docs": "https://platform.minimax.io/docs/guides/video-generation",
+      "pricing": "https://platform.minimax.io/docs/guides/pricing-video",
+      "claudeConnection": null,
+      "restApi": true,
+      "modelSupport": "MiniMax video models",
+      "freeTier": "unverified",
+      "repo": "MiniMax-AI/cli",
+      "note": "Documentation review 2026-10-06; product and account behaviour were not tested. The linked repo is MiniMax's official CLI; no video SDK is documented.",
+      "quickstart": [
+        {
+          "label": "Setup reference: follow the official authentication and request guide. This is a documentation URL, not an executed API example.",
+          "lang": "text",
+          "code": "https://platform.minimax.io/docs/guides/video-generation"
+        }
+      ],
+      "capabilities": {
+        "asyncJobPolling": true,
+        "completionWebhook": true,
+        "signedWebhookPayload": null,
+        "idempotencyKey": null,
+        "costReportedPerJob": null,
+        "multiStepWorkflowInOneCall": null,
+        "officialSdkOrCliRepo": true
+      },
+      "live": {
+        "stars": 2181,
+        "lastPush": "2026-09-29T12:53:48Z",
+        "latestRelease": "v1.0.27",
+        "latestReleaseDate": "2026-09-29",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "n": 6,
+      "name": "fal",
+      "tagline": "queue API in front of a large catalog of hosted models",
+      "homepage": "https://fal.ai",
+      "docs": "https://fal.ai/docs/documentation/model-apis/inference/queue",
+      "pricing": "https://fal.ai/pricing",
+      "claudeConnection": null,
+      "restApi": true,
+      "modelSupport": "Hosted catalog of image, video and audio models",
+      "freeTier": "unverified",
+      "repo": "fal-ai/fal",
+      "note": "Documentation review 2026-10-06; product and account behaviour were not tested.",
+      "quickstart": [
+        {
+          "label": "Setup reference: follow the official authentication and request guide. This is a documentation URL, not an executed API example.",
+          "lang": "text",
+          "code": "https://fal.ai/docs/documentation/model-apis/inference/queue"
+        }
+      ],
+      "capabilities": {
+        "asyncJobPolling": true,
+        "completionWebhook": true,
+        "signedWebhookPayload": true,
+        "idempotencyKey": null,
+        "costReportedPerJob": true,
+        "multiStepWorkflowInOneCall": true,
+        "officialSdkOrCliRepo": true
+      },
+      "live": {
+        "stars": 962,
+        "lastPush": "2026-10-07T00:37:17Z",
+        "latestRelease": "fal_v1.81.3",
+        "latestReleaseDate": "2026-10-01",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "n": 7,
+      "name": "Replicate",
+      "tagline": "predictions API for public and private models",
+      "homepage": "https://replicate.com",
+      "docs": "https://replicate.com/docs/topics/predictions/create-a-prediction",
+      "pricing": "https://replicate.com/pricing",
+      "claudeConnection": null,
+      "restApi": true,
+      "modelSupport": "Public and private models, including video models",
+      "freeTier": "unverified",
+      "repo": "replicate/replicate-python",
+      "note": "Documentation review 2026-10-06; product and account behaviour were not tested.",
+      "quickstart": [
+        {
+          "label": "Setup reference: follow the official authentication and request guide. This is a documentation URL, not an executed API example.",
+          "lang": "text",
+          "code": "https://replicate.com/docs/topics/predictions/create-a-prediction"
+        }
+      ],
+      "capabilities": {
+        "asyncJobPolling": true,
+        "completionWebhook": true,
+        "signedWebhookPayload": true,
+        "idempotencyKey": null,
+        "costReportedPerJob": null,
+        "multiStepWorkflowInOneCall": null,
+        "officialSdkOrCliRepo": true
+      },
+      "live": {
+        "stars": 917,
+        "lastPush": "2025-08-26T17:18:17Z",
+        "latestRelease": "1.0.7",
+        "latestReleaseDate": "2025-05-27",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "n": 8,
+      "name": "Runware",
+      "tagline": "one task endpoint for image, video and audio models",
+      "homepage": "https://runware.ai",
+      "docs": "https://runware.ai/docs/models-api/introduction",
+      "pricing": "https://runware.ai/pricing",
+      "claudeConnection": null,
+      "restApi": true,
+      "modelSupport": "Image, video, audio and 3D models through one task endpoint",
+      "freeTier": "unverified",
+      "repo": "runware/runware-python",
+      "note": "Documentation review 2026-10-06; product and account behaviour were not tested.",
+      "quickstart": [
+        {
+          "label": "Setup reference: follow the official authentication and request guide. This is a documentation URL, not an executed API example.",
+          "lang": "text",
+          "code": "https://runware.ai/docs/models-api/introduction"
+        }
+      ],
+      "capabilities": {
+        "asyncJobPolling": true,
+        "completionWebhook": true,
+        "signedWebhookPayload": null,
+        "idempotencyKey": null,
+        "costReportedPerJob": true,
+        "multiStepWorkflowInOneCall": null,
+        "officialSdkOrCliRepo": true
+      },
+      "live": {
+        "stars": 3,
+        "lastPush": "2026-10-01T15:56:32Z",
+        "latestRelease": null,
+        "latestReleaseDate": null,
+        "checkedAt": "2026-10-07"
+      }
+    }
+  ]
+}
