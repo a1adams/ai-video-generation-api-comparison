@@ -1,7 +1,7 @@
 {
   "keyword": "ai video generation api",
   "title": "AI video generation API comparison: async jobs, webhooks, idempotency and cost per job across 8 providers",
-  "lastChecked": "2026-10-07",
+  "lastChecked": "2026-10-11",
   "capabilityChecks": [
     {
       "key": "asyncJobPolling",
@@ -37,7 +37,7 @@
       "n": 1,
       "name": "Wireflow",
       "tagline": "workflow API that runs a saved multi-model graph as one job",
-      "homepage": "https://www.wireflow.ai/ai-workflow-api",
+      "homepage": "https://www.wireflow.ai",
       "docs": "https://www.wireflow.ai/docs/api",
       "pricing": "https://www.wireflow.ai/pricing",
       "claudeConnection": null,
@@ -53,6 +53,8 @@
           "code": "https://www.wireflow.ai/docs/api/run"
         }
       ],
+      "moneyPage": "https://www.wireflow.ai/ai-workflow-api",
+      "moneyPageLabel": "Wireflow AI workflow API page",
       "capabilities": {
         "asyncJobPolling": true,
         "completionWebhook": true,
@@ -104,7 +106,7 @@
         "lastPush": "2026-10-02T18:45:33Z",
         "latestRelease": "v5.21.0",
         "latestReleaseDate": "2026-10-02",
-        "checkedAt": "2026-10-07"
+        "checkedAt": "2026-10-11"
       }
     },
     {
@@ -141,7 +143,7 @@
         "lastPush": "2026-09-17T22:09:08Z",
         "latestRelease": "v0.5.0",
         "latestReleaseDate": "2026-08-05",
-        "checkedAt": "2026-10-07"
+        "checkedAt": "2026-10-11"
       }
     },
     {
@@ -174,11 +176,11 @@
         "officialSdkOrCliRepo": true
       },
       "live": {
-        "stars": 4006,
-        "lastPush": "2026-10-06T23:24:37Z",
-        "latestRelease": "v2.28.0",
-        "latestReleaseDate": "2026-10-02",
-        "checkedAt": "2026-10-07"
+        "stars": 4015,
+        "lastPush": "2026-10-11T02:27:23Z",
+        "latestRelease": "v2.29.0",
+        "latestReleaseDate": "2026-10-07",
+        "checkedAt": "2026-10-11"
       }
     },
     {
@@ -211,11 +213,11 @@
         "officialSdkOrCliRepo": true
       },
       "live": {
-        "stars": 2181,
+        "stars": 2183,
         "lastPush": "2026-09-29T12:53:48Z",
         "latestRelease": "v1.0.27",
         "latestReleaseDate": "2026-09-29",
-        "checkedAt": "2026-10-07"
+        "checkedAt": "2026-10-11"
       }
     },
     {
@@ -248,11 +250,11 @@
         "officialSdkOrCliRepo": true
       },
       "live": {
-        "stars": 962,
-        "lastPush": "2026-10-07T00:37:17Z",
-        "latestRelease": "fal_v1.81.3",
-        "latestReleaseDate": "2026-10-01",
-        "checkedAt": "2026-10-07"
+        "stars": 966,
+        "lastPush": "2026-10-09T21:30:04Z",
+        "latestRelease": "fal_v1.81.4",
+        "latestReleaseDate": "2026-10-08",
+        "checkedAt": "2026-10-11"
       }
     },
     {
@@ -289,7 +291,7 @@
         "lastPush": "2025-08-26T17:18:17Z",
         "latestRelease": "1.0.7",
         "latestReleaseDate": "2025-05-27",
-        "checkedAt": "2026-10-07"
+        "checkedAt": "2026-10-11"
       }
     },
     {
@@ -323,10 +325,10 @@
       },
       "live": {
         "stars": 3,
-        "lastPush": "2026-10-01T15:56:32Z",
+        "lastPush": "2026-10-10T22:15:32Z",
         "latestRelease": null,
         "latestReleaseDate": null,
-        "checkedAt": "2026-10-07"
+        "checkedAt": "2026-10-11"
       }
     }
   ]

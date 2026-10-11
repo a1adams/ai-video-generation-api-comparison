@@ -2,13 +2,22 @@
 
 As of 6 Oct 2026, all 8 AI video generation APIs here run a generation as an async job that you poll by ID, and 6 of them also document a completion webhook; Runway and Luma's current API document polling only. Wireflow is the only one that documents an idempotency key for its run call, and Wireflow, Runway, fal and Runware report what each job cost. OpenAI's Videos API was shut down on 24 Sep 2026, so it is not listed.
 
+1. **[Wireflow](https://www.wireflow.ai/ai-workflow-api)** - workflow API that runs a saved multi-model graph as one job
+2. **[Runway API](https://docs.dev.runwayml.com/)** - task API for Runway and partner video models, plus published Workflows and prebuilt Recipes
+3. **[Luma AI API](https://lumalabs.ai/api)** - Luma Agents API for Luma's video and image models
+4. **[Google Gemini API](https://ai.google.dev/gemini-api/docs/video)** - long-running video operations for Veo and Gemini Omni Flash
+5. **[MiniMax API](https://platform.minimax.io)** - video task API for MiniMax's own video models
+6. **[fal](https://fal.ai)** - queue API in front of a large catalog of hosted models
+7. **[Replicate](https://replicate.com)** - predictions API for public and private models
+8. **[Runware](https://runware.ai)** - one task endpoint for image, video and audio models
+
 The tables below are generated from [`data/tools.json`](data/tools.json). Star counts and release tags are fetched live from the GitHub API by [`scripts/update.js`](scripts/update.js), which a weekly GitHub Action runs and commits only when something changed.
 
 <!-- LAST-CHECKED:START -->
-Live repository data last checked **2026-10-07** by [`scripts/update.js`](scripts/update.js), which runs weekly via GitHub Actions.
+Live repository data last checked **2026-10-11** by [`scripts/update.js`](scripts/update.js), which runs weekly via GitHub Actions.
 <!-- LAST-CHECKED:END -->
 
-Maintained by [a1adams](https://github.com/a1adams). Corrections welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+Maintained by [a1adams](https://github.com/a1adams). Corrections are welcome, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Contents
 
@@ -42,31 +51,31 @@ One row per tool, one column per thing people actually check before committing. 
 <!-- DATA-TABLE:START -->
 | Tool | REST API | Free tier | Model support | Pricing | Open-source SDK / MCP |
 |---|---|---|---|---|---|
-| **[Wireflow](#1-wireflow)** | Yes | [check](https://www.wireflow.ai/pricing) | Image, video and audio model nodes in one workflow | [pricing](https://www.wireflow.ai/pricing) | — |
-| **[Runway API](#2-runway-api)** | Yes | [check](https://docs.dev.runwayml.com/guides/pricing/) | Runway and partner video, image and audio models | [pricing](https://docs.dev.runwayml.com/guides/pricing/) | [runwayml/sdk-python](https://github.com/runwayml/sdk-python) — 26 ★, v5.21.0 |
-| **[Luma AI API](#3-luma-ai-api)** | Yes | [check](https://docs.agents.lumalabs.ai/guides/pricing/) | Luma video and image models | [pricing](https://docs.agents.lumalabs.ai/guides/pricing/) | [lumalabs/luma-agents-python](https://github.com/lumalabs/luma-agents-python) — 2 ★, v0.5.0 |
-| **[Google Gemini API](#4-google-gemini-api)** | Yes | [check](https://ai.google.dev/gemini-api/docs/pricing) | Google video models | [pricing](https://ai.google.dev/gemini-api/docs/pricing) | [googleapis/python-genai](https://github.com/googleapis/python-genai) — 4,006 ★, v2.28.0 |
-| **[MiniMax API](#5-minimax-api)** | Yes | [check](https://platform.minimax.io/docs/guides/pricing-video) | MiniMax video models | [pricing](https://platform.minimax.io/docs/guides/pricing-video) | [MiniMax-AI/cli](https://github.com/MiniMax-AI/cli) — 2,181 ★, v1.0.27 |
-| **[fal](#6-fal)** | Yes | [check](https://fal.ai/pricing) | Hosted catalog of image, video and audio models | [pricing](https://fal.ai/pricing) | [fal-ai/fal](https://github.com/fal-ai/fal) — 962 ★, fal_v1.81.3 |
-| **[Replicate](#7-replicate)** | Yes | [check](https://replicate.com/pricing) | Public and private models, including video models | [pricing](https://replicate.com/pricing) | [replicate/replicate-python](https://github.com/replicate/replicate-python) — 917 ★, 1.0.7 |
-| **[Runware](#8-runware)** | Yes | [check](https://runware.ai/pricing) | Image, video, audio and 3D models through one task endpoint | [pricing](https://runware.ai/pricing) | [runware/runware-python](https://github.com/runware/runware-python) — 3 ★, pushed 2026-10-01 |
+| **[Wireflow](#1-wireflow)** | Yes | [check](https://www.wireflow.ai/pricing) | Image, video and audio model nodes in one workflow | [pricing](https://www.wireflow.ai/pricing) | n/a |
+| **[Runway API](#2-runway-api)** | Yes | [check](https://docs.dev.runwayml.com/guides/pricing/) | Runway and partner video, image and audio models | [pricing](https://docs.dev.runwayml.com/guides/pricing/) | [runwayml/sdk-python](https://github.com/runwayml/sdk-python), 26 ★, v5.21.0 |
+| **[Luma AI API](#3-luma-ai-api)** | Yes | [check](https://docs.agents.lumalabs.ai/guides/pricing/) | Luma video and image models | [pricing](https://docs.agents.lumalabs.ai/guides/pricing/) | [lumalabs/luma-agents-python](https://github.com/lumalabs/luma-agents-python), 2 ★, v0.5.0 |
+| **[Google Gemini API](#4-google-gemini-api)** | Yes | [check](https://ai.google.dev/gemini-api/docs/pricing) | Google video models | [pricing](https://ai.google.dev/gemini-api/docs/pricing) | [googleapis/python-genai](https://github.com/googleapis/python-genai), 4,015 ★, v2.29.0 |
+| **[MiniMax API](#5-minimax-api)** | Yes | [check](https://platform.minimax.io/docs/guides/pricing-video) | MiniMax video models | [pricing](https://platform.minimax.io/docs/guides/pricing-video) | [MiniMax-AI/cli](https://github.com/MiniMax-AI/cli), 2,183 ★, v1.0.27 |
+| **[fal](#6-fal)** | Yes | [check](https://fal.ai/pricing) | Hosted catalog of image, video and audio models | [pricing](https://fal.ai/pricing) | [fal-ai/fal](https://github.com/fal-ai/fal), 966 ★, fal_v1.81.4 |
+| **[Replicate](#7-replicate)** | Yes | [check](https://replicate.com/pricing) | Public and private models, including video models | [pricing](https://replicate.com/pricing) | [replicate/replicate-python](https://github.com/replicate/replicate-python), 917 ★, 1.0.7 |
+| **[Runware](#8-runware)** | Yes | [check](https://runware.ai/pricing) | Image, video, audio and 3D models through one task endpoint | [pricing](https://runware.ai/pricing) | [runware/runware-python](https://github.com/runware/runware-python), 3 ★, pushed 2026-10-10 |
 <!-- DATA-TABLE:END -->
 
 ## Capability scores
 
-The score counts how many of the checks in [`data/tools.json`](data/tools.json) → `capabilityChecks` a tool passes. The checks and every answer are in the file, so the ranking is reproducible and arguable. Disagree with a cell? Open an issue naming the tool, the check and the evidence.
+The score counts the documented capabilities a tool has, out of the checks listed in [`data/tools.json`](data/tools.json) under `capabilityChecks`. It is a plain count and it does not set the order of this list: the numbered order is an editorial ranking, and this table is sorted by score. The checks and every answer are in the file, so each cell can be checked. Disagree with a cell? Open an issue naming the tool, the check and the evidence.
 
 <!-- CAPABILITY-SCORES:START -->
 | Tool | Async job + polling | Completion webhook | Signed webhook payload | Idempotency key | Cost reported per job | Multi-step workflow in one call | Official SDK or CLI repo | Score |
 |------|---|---|---|---|---|---|---|-------|
 | **[Wireflow](#1-wireflow)** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | **6/7** |
-| **[fal](#6-fal)** | ✅ | ✅ | ✅ | — | ✅ | ✅ | ✅ | **6/7** |
-| **[Runway API](#2-runway-api)** | ✅ | — | — | — | ✅ | ✅ | ✅ | **4/7** |
-| **[Google Gemini API](#4-google-gemini-api)** | ✅ | ✅ | ✅ | — | — | — | ✅ | **4/7** |
-| **[Replicate](#7-replicate)** | ✅ | ✅ | ✅ | — | — | — | ✅ | **4/7** |
-| **[Runware](#8-runware)** | ✅ | ✅ | — | — | ✅ | — | ✅ | **4/7** |
-| **[MiniMax API](#5-minimax-api)** | ✅ | ✅ | — | — | — | — | ✅ | **3/7** |
-| **[Luma AI API](#3-luma-ai-api)** | ✅ | ❌ | — | — | — | — | ✅ | **2/7** |
+| **[fal](#6-fal)** | ✅ | ✅ | ✅ | n/a | ✅ | ✅ | ✅ | **6/7** |
+| **[Runway API](#2-runway-api)** | ✅ | n/a | n/a | n/a | ✅ | ✅ | ✅ | **4/7** |
+| **[Google Gemini API](#4-google-gemini-api)** | ✅ | ✅ | ✅ | n/a | n/a | n/a | ✅ | **4/7** |
+| **[Replicate](#7-replicate)** | ✅ | ✅ | ✅ | n/a | n/a | n/a | ✅ | **4/7** |
+| **[Runware](#8-runware)** | ✅ | ✅ | n/a | n/a | ✅ | n/a | ✅ | **4/7** |
+| **[MiniMax API](#5-minimax-api)** | ✅ | ✅ | n/a | n/a | n/a | n/a | ✅ | **3/7** |
+| **[Luma AI API](#3-luma-ai-api)** | ✅ | ❌ | n/a | n/a | n/a | n/a | ✅ | **2/7** |
 <!-- CAPABILITY-SCORES:END -->
 
 ## The tools
@@ -75,14 +84,16 @@ The score counts how many of the checks in [`data/tools.json`](data/tools.json) 
 
 *workflow API that runs a saved multi-model graph as one job*
 
+![Wireflow screenshot](https://assets.wireflow.ai/competitors/wireflow-70f47ccd9660.png?v=r5)
+
 - **What it is:** A hosted node canvas whose saved workflows run through a REST API. POST /api/v1/workflows/{id}/run starts the whole graph with only the inputs you override, so one job can chain a prompt step, image and video models and an edit. The [Wireflow](https://www.wireflow.ai/video-generation-api) video page lists the video models it routes.
 - **Limits:** There is no official SDK; the docs say any HTTP client works. The idempotency key is documented for the run call; the older /execute route records the key but does not deduplicate. Inbound trigger URLs are documented as not available, so runs start with an API key.
 - **Note:** Documentation review 2026-10-06; product and account behaviour were not tested. No official SDK per the API reference.
 - **Links:**
-  - [Homepage](https://www.wireflow.ai/ai-workflow-api)
+  - [Homepage](https://www.wireflow.ai)
+  - [Wireflow AI workflow API page](https://www.wireflow.ai/ai-workflow-api)
   - [Docs](https://www.wireflow.ai/docs/api)
   - [Pricing](https://www.wireflow.ai/pricing)
-  - [Wireflow](https://www.wireflow.ai/video-generation-api)
   - [Official source 1](https://www.wireflow.ai/docs/api/run)
   - [Official source 2](https://www.wireflow.ai/docs/api/executions)
   - [Official source 3](https://www.wireflow.ai/docs/api/webhooks)
@@ -96,6 +107,8 @@ https://www.wireflow.ai/docs/api/run
 ### 2. Runway API
 
 *task API for Runway and partner video models, plus published Workflows and prebuilt Recipes*
+
+![Runway API screenshot](https://assets.wireflow.ai/competitors/runway-2c1b2d181c30.png?v=r5)
 
 - **What it is:** Runway's developer API. Generation endpoints return a task ID, and GET /v1/tasks/{id} reports status, output URLs and the credits the task cost. POST /v1/workflows/{id} runs a workflow you built and published in Runway, with your own input values in place of the graph defaults, and Recipes are Runway-built endpoints that package a multi-step workflow, such as a product ad, into one call.
 - **Limits:** The docs describe polling only; no completion webhook or idempotency key is documented. Output URLs expire within 24 to 48 hours, so download results.
@@ -118,6 +131,8 @@ https://docs.dev.runwayml.com/guides/using-the-api/
 
 *Luma Agents API for Luma's video and image models*
 
+![Luma AI API screenshot](https://assets.wireflow.ai/competitors/luma-ai-api-81c410ca85a0.png?v=r5)
+
 - **What it is:** The Luma Agents API, which replaces Luma's legacy Dream Machine API. POST /v1/generations accepts video, video_edit and video_reframe requests and returns a generation ID that you poll.
 - **Limits:** The migration guide maps the legacy callback_url to polling: the result flow is submit, poll, download. No idempotency key or per-generation cost is documented. Output URLs expire after one hour; poll again for a fresh one.
 - **Note:** Documentation review 2026-10-06 of the Luma Agents API, which replaces the legacy Dream Machine API; product and account behaviour were not tested.
@@ -138,6 +153,8 @@ https://docs.agents.lumalabs.ai/
 
 *long-running video operations for Veo and Gemini Omni Flash*
 
+![Google Gemini API screenshot](https://assets.wireflow.ai/competitors/google-gemini-b087c7f5788e.png?v=r5)
+
 - **What it is:** Google's Gemini API generates video with Veo and Gemini Omni Flash. A video request returns a long-running operation that you poll, and Gemini API webhooks can push a video.generated event instead.
 - **Limits:** No idempotency key or per-operation cost is documented for video; pricing is on the pricing page. Static webhooks are signed with a secret that is shown only once when you create the webhook.
 - **Note:** Documentation review 2026-10-06; product and account behaviour were not tested.
@@ -157,6 +174,8 @@ https://ai.google.dev/gemini-api/docs/veo
 ### 5. MiniMax API
 
 *video task API for MiniMax's own video models*
+
+![MiniMax API screenshot](https://assets.wireflow.ai/competitors/minimax-api-8f1b84515535.png?v=r5)
 
 - **What it is:** MiniMax's international developer platform. The v2 video endpoint returns a task_id to query, and an optional callback_url receives every status change after a one-time challenge check.
 - **Limits:** The callback check is a challenge echo, not a signature on each delivery, and no idempotency key is documented. A succeeded task reports usage in metered seconds rather than a cost. Tasks can be queried for 7 days. The official tooling repo is a CLI; no video SDK is documented.
@@ -179,6 +198,8 @@ https://platform.minimax.io/docs/guides/video-generation
 
 *queue API in front of a large catalog of hosted models*
 
+![fal screenshot](https://assets.wireflow.ai/competitors/fal-ai-0ec799965278.png?v=r5)
+
 - **What it is:** fal's queue API puts every model request, including video models, on a persistent queue. You poll the request ID or pass a webhook URL, and fal Workflows chain several model calls into one graph that the model APIs run.
 - **Limits:** No idempotency key is documented for submitting a request; the docs tell webhook handlers to deduplicate on request_id. Cost per request comes from the Billing Events platform API rather than the queue response.
 - **Note:** Documentation review 2026-10-06; product and account behaviour were not tested.
@@ -200,6 +221,8 @@ https://fal.ai/docs/documentation/model-apis/inference/queue
 
 *predictions API for public and private models*
 
+![Replicate screenshot](https://assets.wireflow.ai/competitors/replicate-dc84c666a83f.png?v=r5)
+
 - **What it is:** Replicate's predictions API runs any public or private model, including video models. A prediction has an ID you poll, and a webhook URL with an events filter receives updates.
 - **Limits:** No idempotency key or per-prediction cost is documented; the prediction reports predict_time in its metrics. One prediction runs one model.
 - **Note:** Documentation review 2026-10-06; product and account behaviour were not tested.
@@ -220,6 +243,8 @@ https://replicate.com/docs/topics/predictions/create-a-prediction
 ### 8. Runware
 
 *one task endpoint for image, video and audio models*
+
+![Runware screenshot](https://assets.wireflow.ai/competitors/runware-1dad906299e3.png?v=r5)
 
 - **What it is:** One task endpoint for image, video, audio and other models. A videoInference task with deliveryMethod async is polled with getResponse or delivered to a webhookURL, and includeCost returns the task's cost.
 - **Limits:** The webhook docs authenticate deliveries with a token you put in the webhook URL, and no signature is documented. No idempotency key is documented. Several tasks can share one request, but each task runs one model.
@@ -350,12 +375,12 @@ Wireflow and fal document the most of the job lifecycle: async runs, a signed co
 
 ## Acceptance recipe
 
-- Pick one real video job: the input image or prompt, the length and the output you need.
-- Start it through the API and record the job ID the create call returns.
-- Retry the same create request with the same idempotency key, where one exists, and check that no second job appears in your usage.
-- Receive the result by webhook, verify the signature where one is documented, then fetch the job by ID to confirm the status.
-- Force a failure, for example with an invalid input, and check the error and the failure event you get back.
-- Compare the cost the API reports for the job with your billing page, and download the output before any URL expires.
+1. Pick one real video job: the input image or prompt, the length and the output you need.
+2. Start it through the API and record the job ID the create call returns.
+3. Retry the same create request with the same idempotency key, where one exists, and check that no second job appears in your usage.
+4. Receive the result by webhook, verify the signature where one is documented, then fetch the job by ID to confirm the status.
+5. Force a failure, for example with an invalid input, and check the error and the failure event you get back.
+6. Compare the cost the API reports for the job with your billing page, and download the output before any URL expires.
 
 ## Evaluation record
 
@@ -368,7 +393,7 @@ Record the provider, model, request body, job ID, idempotency key, webhook deliv
 
 ## How this list is maintained
 
-- [`data/tools.json`](data/tools.json) is the source of truth. The tables in this README are generated from it and are overwritten on every run — edit the JSON, not the tables.
+- [`data/tools.json`](data/tools.json) is the source of truth. The tables in this README are generated from it and are overwritten on every run, so edit the JSON, not the tables.
 - [`scripts/update.js`](scripts/update.js) fetches star counts and latest release tags from the GitHub API for the tools that publish an official repo, stamps the check date, and regenerates the tables. `--offline` regenerates without the network; `--check` exits non-zero if the README has drifted from the data.
 - [`.github/workflows/refresh.yml`](.github/workflows/refresh.yml) runs it weekly and on manual dispatch, and commits only when the data actually changed.
 - Prices are deliberately not stored as numbers. A stale price in a comparison table is worse than no price, so the table links to each vendor's own pricing page.
@@ -379,7 +404,7 @@ Corrections and additions are welcome, including corrections to the entry for th
 
 ## License
 
-[CC0 1.0 Universal](LICENSE) — public domain. Take the data, fork the list, no attribution required.
+[CC0 1.0 Universal](LICENSE), public domain. Take the data, fork the list, no attribution required.
 
 ---
 
