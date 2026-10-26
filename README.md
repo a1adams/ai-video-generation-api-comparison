@@ -14,7 +14,7 @@ As of 6 Oct 2026, all 8 AI video generation APIs here run a generation as an asy
 The tables below are generated from [`data/tools.json`](data/tools.json). Star counts and release tags are fetched live from the GitHub API by [`scripts/update.js`](scripts/update.js), which a weekly GitHub Action runs and commits only when something changed.
 
 <!-- LAST-CHECKED:START -->
-Live repository data last checked **2026-10-19** by [`scripts/update.js`](scripts/update.js), which runs weekly via GitHub Actions.
+Live repository data last checked **2026-10-26** by [`scripts/update.js`](scripts/update.js), which runs weekly via GitHub Actions.
 <!-- LAST-CHECKED:END -->
 
 Maintained by [a1adams](https://github.com/a1adams). Corrections are welcome, see [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -52,13 +52,13 @@ One row per tool, one column per thing people actually check before committing. 
 | Tool | REST API | Free tier | Model support | Pricing | Open-source SDK / MCP |
 |---|---|---|---|---|---|
 | **[Wireflow](#1-wireflow)** | Yes | [check](https://www.wireflow.ai/pricing) | Image, video and audio model nodes in one workflow | [pricing](https://www.wireflow.ai/pricing) | n/a |
-| **[Runway API](#2-runway-api)** | Yes | [check](https://docs.dev.runwayml.com/guides/pricing/) | Runway and partner video, image and audio models | [pricing](https://docs.dev.runwayml.com/guides/pricing/) | [runwayml/sdk-python](https://github.com/runwayml/sdk-python), 26 ★, v5.22.0 |
+| **[Runway API](#2-runway-api)** | Yes | [check](https://docs.dev.runwayml.com/guides/pricing/) | Runway and partner video, image and audio models | [pricing](https://docs.dev.runwayml.com/guides/pricing/) | [runwayml/sdk-python](https://github.com/runwayml/sdk-python), 26 ★, v5.24.0 |
 | **[Luma AI API](#3-luma-ai-api)** | Yes | [check](https://docs.agents.lumalabs.ai/guides/pricing/) | Luma video and image models | [pricing](https://docs.agents.lumalabs.ai/guides/pricing/) | [lumalabs/luma-agents-python](https://github.com/lumalabs/luma-agents-python), 2 ★, v0.5.0 |
-| **[Google Gemini API](#4-google-gemini-api)** | Yes | [check](https://ai.google.dev/gemini-api/docs/pricing) | Google video models | [pricing](https://ai.google.dev/gemini-api/docs/pricing) | [googleapis/python-genai](https://github.com/googleapis/python-genai), 4,033 ★, v2.31.0 |
-| **[MiniMax API](#5-minimax-api)** | Yes | [check](https://platform.minimax.io/docs/guides/pricing-video) | MiniMax video models | [pricing](https://platform.minimax.io/docs/guides/pricing-video) | [MiniMax-AI/cli](https://github.com/MiniMax-AI/cli), 2,196 ★, v1.0.28 |
-| **[fal](#6-fal)** | Yes | [check](https://fal.ai/pricing) | Hosted catalog of image, video and audio models | [pricing](https://fal.ai/pricing) | [fal-ai/fal](https://github.com/fal-ai/fal), 972 ★, isolate_proto_v0.34.5 |
+| **[Google Gemini API](#4-google-gemini-api)** | Yes | [check](https://ai.google.dev/gemini-api/docs/pricing) | Google video models | [pricing](https://ai.google.dev/gemini-api/docs/pricing) | [googleapis/python-genai](https://github.com/googleapis/python-genai), 4,047 ★, v2.33.0 |
+| **[MiniMax API](#5-minimax-api)** | Yes | [check](https://platform.minimax.io/docs/guides/pricing-video) | MiniMax video models | [pricing](https://platform.minimax.io/docs/guides/pricing-video) | [MiniMax-AI/cli](https://github.com/MiniMax-AI/cli), 2,205 ★, v1.0.28 |
+| **[fal](#6-fal)** | Yes | [check](https://fal.ai/pricing) | Hosted catalog of image, video and audio models | [pricing](https://fal.ai/pricing) | [fal-ai/fal](https://github.com/fal-ai/fal), 974 ★, fal_v1.83.0 |
 | **[Replicate](#7-replicate)** | Yes | [check](https://replicate.com/pricing) | Public and private models, including video models | [pricing](https://replicate.com/pricing) | [replicate/replicate-python](https://github.com/replicate/replicate-python), 918 ★, 1.0.7 |
-| **[Runware](#8-runware)** | Yes | [check](https://runware.ai/pricing) | Image, video, audio and 3D models through one task endpoint | [pricing](https://runware.ai/pricing) | [runware/runware-python](https://github.com/runware/runware-python), 3 ★, pushed 2026-10-12 |
+| **[Runware](#8-runware)** | Yes | [check](https://runware.ai/pricing) | Image, video, audio and 3D models through one task endpoint | [pricing](https://runware.ai/pricing) | [runware/runware-python](https://github.com/runware/runware-python), 3 ★, pushed 2026-10-23 |
 <!-- DATA-TABLE:END -->
 
 ## Capability scores
