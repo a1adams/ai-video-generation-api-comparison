@@ -1,7 +1,7 @@
 {
   "keyword": "ai video generation api",
   "title": "AI video generation API comparison: async jobs, webhooks, idempotency and cost per job across 8 providers",
-  "lastChecked": "2026-11-02",
+  "lastChecked": "2026-11-09",
   "capabilityChecks": [
     {
       "key": "asyncJobPolling",
@@ -106,7 +106,7 @@
         "lastPush": "2026-11-02T14:44:57Z",
         "latestRelease": "v5.24.0",
         "latestReleaseDate": "2026-10-23",
-        "checkedAt": "2026-11-02"
+        "checkedAt": "2026-11-09"
       }
     },
     {
@@ -143,7 +143,7 @@
         "lastPush": "2026-09-17T22:09:08Z",
         "latestRelease": "v0.5.0",
         "latestReleaseDate": "2026-08-05",
-        "checkedAt": "2026-11-02"
+        "checkedAt": "2026-11-09"
       }
     },
     {
@@ -176,11 +176,11 @@
         "officialSdkOrCliRepo": true
       },
       "live": {
-        "stars": 4054,
-        "lastPush": "2026-10-31T00:34:25Z",
-        "latestRelease": "v2.34.0",
-        "latestReleaseDate": "2026-10-29",
-        "checkedAt": "2026-11-02"
+        "stars": 4058,
+        "lastPush": "2026-11-08T20:32:42Z",
+        "latestRelease": "v3.0.0",
+        "latestReleaseDate": "2026-11-06",
+        "checkedAt": "2026-11-09"
       }
     },
     {
@@ -213,11 +213,11 @@
         "officialSdkOrCliRepo": true
       },
       "live": {
-        "stars": 2211,
-        "lastPush": "2026-10-19T10:26:46Z",
+        "stars": 2208,
+        "lastPush": "2026-11-09T06:51:28Z",
         "latestRelease": "v1.0.28",
         "latestReleaseDate": "2026-10-12",
-        "checkedAt": "2026-11-02"
+        "checkedAt": "2026-11-09"
       }
     },
     {
@@ -250,11 +250,11 @@
         "officialSdkOrCliRepo": true
       },
       "live": {
-        "stars": 979,
-        "lastPush": "2026-11-02T15:30:15Z",
+        "stars": 981,
+        "lastPush": "2026-11-09T12:31:12Z",
         "latestRelease": "fal_v1.84.0",
         "latestReleaseDate": "2026-10-30",
-        "checkedAt": "2026-11-02"
+        "checkedAt": "2026-11-09"
       }
     },
     {
@@ -291,7 +291,7 @@
         "lastPush": "2025-08-26T17:18:17Z",
         "latestRelease": "1.0.7",
         "latestReleaseDate": "2025-05-27",
-        "checkedAt": "2026-11-02"
+        "checkedAt": "2026-11-09"
       }
     },
     {
@@ -325,10 +325,10 @@
       },
       "live": {
         "stars": 3,
-        "lastPush": "2026-10-28T11:29:32Z",
+        "lastPush": "2026-11-05T17:38:02Z",
         "latestRelease": null,
         "latestReleaseDate": null,
-        "checkedAt": "2026-11-02"
+        "checkedAt": "2026-11-09"
       }
     }
   ]
